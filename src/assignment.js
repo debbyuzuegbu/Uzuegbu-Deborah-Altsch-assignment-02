@@ -8,19 +8,19 @@ const assignment = {};
  * Challenge - 1
  * 
  * Calculate and return the sum of the numbers in an array.
-
  * If you did Challenge - 1, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
- */ 
+ */
 function sumOfNumbers(arrayOfNumbers) {
-    let sum = 0;
-    for (i = 0; i < arrayOfNumbers.length; i++){
-        sum = sum + arrayOfNumbers[i]
-    }
-    return sum
-  
+  let sum = 0
+
+  for (i = 0; i < arrayOfNumbers.length; i++) {
+    sum = sum + arrayOfNumbers[i]
+  }
+
+  return (sum)
 }
 assignment.sumOfNumbers = sumOfNumbers;
 
@@ -31,17 +31,17 @@ assignment.sumOfNumbers = sumOfNumbers;
  * If you did Challenge - 2, remove the comment in the line just after this function
  * 
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
- * @returns number the count of even numbers return arrayOfNumbers.length;
+ * @returns number the count of even numbers
  */
 function countEvenNumbers(arrayOfNumbers) {
-    let evenNumbers = [];
-    for (let i = 0; i < arrayOfNumbers.length; i++) {
-        if (arrayOfNumbers[i] % 2 == 0) {
-            evenNumbers.push(arrayOfNumbers[i]);
-        }
+    let count = 0
+  
+  for (i = 0; i <arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 2 === 0) {
+      count = count + 1
     }
-    console.log("evenNumbers count", evenNumbers.length);
-    return evenNumbers.length;
+  }
+  return count
 }
 assignment.countEvenNumbers = countEvenNumbers;
 
@@ -60,9 +60,11 @@ assignment.countEvenNumbers = countEvenNumbers;
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
+  fahrenheit = x => Math.trunc((x * 1.8) + 32);
+  fahrenheit = arrayOfNumbers.map(fahrenheit);
+  return fahrenheit
 }
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
 // ========================
